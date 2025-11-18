@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="id">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Top Up Diamond Store</title>
+  <script src="/_sdk/element_sdk.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <limk rel="stylesheet" href="styles.css"> 
+ </head>
+ <body><!-- Navigation -->
+  <nav id="navbar">
+   <div style="max-width: 1200px; margin: 0 auto; padding: 16px 24px; display: flex; justify-content: space-between; align-items: center;">
+    <div style="display: flex; align-items: center; gap: 12px;">
+     <div style="width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 24px;">
+      💎
+     </div>
+     <h1 id="site-title" style="font-size: 24px; font-weight: bold;"></h1>
+    </div>
+    <div style="display: flex; gap: 24px; align-items: center;"><a href="#games" style="text-decoration: none; font-weight: 500; transition: color 0.3s;">Games</a> <a href="#payment" style="text-decoration: none; font-weight: 500; transition: color 0.3s;">Pembayaran</a> <a href="#process" style="text-decoration: none; font-weight: 500; transition: color 0.3s;">Cara Pesan</a>
+    </div>
+   </div>
+  </nav><!-- Hero Section -->
+  <section style="padding: 80px 24px; text-align: center;">
+   <div style="max-width: 900px; margin: 0 auto;">
+    <div class="floating" style="font-size: 80px; margin-bottom: 24px;">
+     🎮
+    </div>
+    <h2 id="hero-title" style="font-size: 48px; font-weight: bold; margin-bottom: 16px;"></h2>
+    <p id="hero-subtitle" style="font-size: 20px; margin-bottom: 32px; opacity: 0.8;"></p>
+    <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+     <div style="display: flex; align-items: center; gap: 8px; padding: 12px 24px; border-radius: 8px;"><span style="font-size: 24px;">⚡</span> <span style="font-weight: 600;">Proses Instan</span>
+     </div>
+     <div style="display: flex; align-items: center; gap: 8px; padding: 12px 24px; border-radius: 8px;"><span style="font-size: 24px;">🔒</span> <span style="font-weight: 600;">Aman &amp; Terpercaya</span>
+     </div>
+     <div style="display: flex; align-items: center; gap: 8px; padding: 12px 24px; border-radius: 8px;"><span style="font-size: 24px;">💰</span> <span style="font-weight: 600;">Harga Terbaik</span>
+     </div>
+    </div>
+   </div>
+  </section><!-- Games Section -->
+  <section id="games" style="padding: 60px 24px;">
+   <div style="max-width: 1200px; margin: 0 auto;">
+    <h3 id="games-heading" style="font-size: 36px; font-weight: bold; text-align: center; margin-bottom: 48px;"></h3>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px;"><!-- Free Fire Card -->
+     <div class="game-card" onclick="openGameModal('Free Fire', 'freefire')" style="border-radius: 16px; overflow: hidden; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);">
+      <div style="height: 200px; background: linear-gradient(135deg, #ff6b6b 0%, #ff8e53 100%); display: flex; align-items: center; justify-content: center; font-size: 80px;">
+       🔥
+      </div>
+      <div style="padding: 24px;">
+       <h4 style="font-size: 24px; font-weight: bold; margin-bottom: 8px;">Free Fire</h4>
+       <p style="opacity: 0.7; margin-bottom: 16px;">Top up diamond dengan harga termurah</p>
+       <div style="display: flex; justify-content: space-between; align-items: center;"><span style="font-weight: bold; font-size: 18px;">Mulai dari Rp 5.000</span> <button style="padding: 8px 16px; border-radius: 8px; border: none; cursor: pointer; font-weight: 600;">Beli →</button>
+       </div>
+      </div>
+     </div><!-- Mobile Legends Card -->
+     <div class="game-card" onclick="openGameModal('Mobile Legends', 'mobilelegends')" style="border-radius: 16px; overflow: hidden; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);">
+      <div style="height: 200px; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); display: flex; align-items: center; justify-content: center; font-size: 80px;">
+       ⚔️
+      </div>
+      <div style="padding: 24px;">
+       <h4 style="font-size: 24px; font-weight: bold; margin-bottom: 8px;">Mobile Legends</h4>
+       <p style="opacity: 0.7; margin-bottom: 16px;">Diamond ML proses cepat &amp; otomatis</p>
+       <div style="display: flex; justify-content: space-between; align-items: center;"><span style="font-weight: bold; font-size: 18px;">Mulai dari Rp 10.000</span> <button style="padding: 8px 16px; border-radius: 8px; border: none; cursor: pointer; font-weight: 600;">Beli →</button>
+       </div>
+      </div>
+     </div><!-- PUBG Mobile Card -->
+     <div class="game-card" onclick="openGameModal('PUBG Mobile', 'pubg')" style="border-radius: 16px; overflow: hidden; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);">
+      <div style="height: 200px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); display: flex; align-items: center; justify-content: center; font-size: 80px;">
+       ����
+      </div>
+      <div style="padding: 24px;">
+       <h4 style="font-size: 24px; font-weight: bold; margin-bottom: 8px;">PUBG Mobile</h4>
+       <p style="opacity: 0.7; margin-bottom: 16px;">UC PUBG dengan berbagai nominal</p>
+       <div style="display: flex; justify-content: space-between; align-items: center;"><span style="font-weight: bold; font-size: 18px;">Mulai dari Rp 15.000</span> <button style="padding: 8px 16px; border-radius: 8px; border: none; cursor: pointer; font-weight: 600;">Beli →</button>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section><!-- Payment Methods Section -->
+  <section id="payment" style="padding: 60px 24px;">
+   <div style="max-width: 1200px; margin: 0 auto;">
+    <h3 id="payment-heading" style="font-size: 36px; font-weight: bold; text-align: center; margin-bottom: 48px;"></h3>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px;">
+     <div class="payment-card" style="padding: 32px; border-radius: 16px; text-align: center; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);">
+      <div style="font-size: 48px; margin-bottom: 16px;">
+       💳
+      </div>
+      <h4 style="font-size: 20px; font-weight: bold; margin-bottom: 8px;">DANA</h4>
+      <p style="opacity: 0.7; font-size: 14px;">Pembayaran cepat &amp; mudah</p>
+     </div>
+     <div class="payment-card" style="padding: 32px; border-radius: 16px; text-align: center; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);">
+      <div style="font-size: 48px; margin-bottom: 16px;">
+       💜
+      </div>
+      <h4 style="font-size: 20px; font-weight: bold; margin-bottom: 8px;">OVO</h4>
+      <p style="opacity: 0.7; font-size: 14px;">Bayar pakai poin OVO</p>
+     </div>
+     <div class="payment-card" style="padding: 32px; border-radius: 16px; text-align: center; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);">
+      <div style="font-size: 48px; margin-bottom: 16px;">
+       🏍️
+      </div>
+      <h4 style="font-size: 20px; font-weight: bold; margin-bottom: 8px;">GoPay</h4>
+      <p style="opacity: 0.7; font-size: 14px;">Praktis dengan GoPay</p>
+     </div>
+     <div class="payment-card" style="padding: 32px; border-radius: 16px; text-align: center; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);">
+      <div style="font-size: 48px; margin-bottom: 16px;">
+       📱
+      </div>
+      <h4 style="font-size: 20px; font-weight: bold; margin-bottom: 8px;">QRIS</h4>
+      <p style="opacity: 0.7; font-size: 14px;">Scan &amp; bayar instan</p>
+     </div>
+    </div>
+   </div>
+  </section><!-- How to Order Section -->
+  <section id="process" style="padding: 60px 24px;">
+   <div style="max-width: 1000px; margin: 0 auto;">
+    <h3 style="font-size: 36px; font-weight: bold; text-align: center; margin-bottom: 48px;">Cara Pesan Diamond</h3>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 32px;">
+     <div class="process-step" style="text-align: center;">
+      <div style="width: 80px; height: 80px; border-radius: 50%; margin: 0 auto 16px; display: flex; align-items: center; justify-content: center; font-size: 36px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+       1️⃣
+      </div>
+      <h4 style="font-size: 18px; font-weight: bold; margin-bottom: 8px;">Pilih Game</h4>
+      <p style="opacity: 0.7; font-size: 14px;">Pilih game yang ingin kamu top up</p>
+     </div>
+     <div class="process-step" style="text-align: center;">
+      <div style="width: 80px; height: 80px; border-radius: 50%; margin: 0 auto 16px; display: flex; align-items: center; justify-content: center; font-size: 36px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+       2️⃣
+      </div>
+      <h4 style="font-size: 18px; font-weight: bold; margin-bottom: 8px;">Masukkan ID</h4>
+      <p style="opacity: 0.7; font-size: 14px;">Input User ID &amp; Zone ID kamu</p>
+     </div>
+     <div class="process-step" style="text-align: center;">
+      <div style="width: 80px; height: 80px; border-radius: 50%; margin: 0 auto 16px; display: flex; align-items: center; justify-content: center; font-size: 36px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+       3️⃣
+      </div>
+      <h4 style="font-size: 18px; font-weight: bold; margin-bottom: 8px;">Pilih Nominal</h4>
+      <p style="opacity: 0.7; font-size: 14px;">Pilih paket diamond yang kamu mau</p>
+     </div>
+     <div class="process-step" style="text-align: center;">
+      <div style="width: 80px; height: 80px; border-radius: 50%; margin: 0 auto 16px; display: flex; align-items: center; justify-content: center; font-size: 36px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+       4️⃣
+      </div>
+      <h4 style="font-size: 18px; font-weight: bold; margin-bottom: 8px;">Bayar &amp; Selesai</h4>
+      <p style="opacity: 0.7; font-size: 14px;">Bayar dan diamond langsung masuk</p>
+     </div>
+    </div>
+   </div>
+  </section><!-- Footer -->
+  <footer style="padding: 48px 24px; text-align: center; border-top: 1px solid rgba(0, 0, 0, 0.1);">
+   <div style="max-width: 1200px; margin: 0 auto;">
+    <div style="display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 24px;">
+     <div style="width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 24px;">
+      💎
+     </div>
+     <h1 style="font-size: 24px; font-weight: bold;">Denz.store</h1>
+    </div>
+    <p id="footer-text" style="opacity: 0.7; margin-bottom: 24px;"></p>
+    <div style="display: flex; gap: 24px; justify-content: center;"><a href="#" style="opacity: 0.7; text-decoration: none; transition: opacity 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">Tentang Kami</a> <a href="#" style="opacity: 0.7; text-decoration: none; transition: opacity 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">Syarat &amp; Ketentuan</a> <a href="#" style="opacity: 0.7; text-decoration: none; transition: opacity 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">Hubungi Kami</a>
+    </div>
+   </div>
+  </footer><!-- Game Modal -->
+  <div id="gameModal" class="modal">
+   <div class="modal-content">
+    <div style="padding: 32px;">
+     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+      <h3 id="modalGameTitle" style="font-size: 28px; font-weight: bold;"></h3><button onclick="closeGameModal()" style="width: 36px; height: 36px; border: none; border-radius: 8px; cursor: pointer; font-size: 20px; display: flex; align-items: center; justify-content: center;">✕</button>
+     </div><!-- User ID Input -->
+     <div style="margin-bottom: 24px;"><label style="display: block; font-weight: 600; margin-bottom: 8px;">User ID</label> <input id="userId" type="text" placeholder="Masukkan User ID" style="width: 100%; padding: 12px; border: 2px solid #e5e7eb; border-radius: 8px; font-size: 16px;">
+      <div id="userIdHelper" style="font-size: 12px; margin-top: 6px; opacity: 0.7;"></div>
+      <div id="userIdError" style="font-size: 12px; margin-top: 6px; color: #ef4444; display: none; font-weight: 600;">
+       ❌ Format ID tidak valid
+      </div>
+      <div id="userIdSuccess" style="font-size: 12px; margin-top: 6px; color: #10b981; display: none; font-weight: 600;">
+       ✅ ID valid
+      </div>
+     </div><!-- Zone ID Input (for ML) -->
+     <div id="zoneIdContainer" style="margin-bottom: 24px; display: none;"><label style="display: block; font-weight: 600; margin-bottom: 8px;">Zone ID</label> <input id="zoneId" type="text" placeholder="Masukkan Zone ID" style="width: 100%; padding: 12px; border: 2px solid #e5e7eb; border-radius: 8px; font-size: 16px;">
+      <div id="zoneIdHelper" style="font-size: 12px; margin-top: 6px; opacity: 0.7;">
+       Contoh: 1234
+      </div>
+      <div id="zoneIdError" style="font-size: 12px; margin-top: 6px; color: #ef4444; display: none; font-weight: 600;">
+       ❌ Format Zone ID tidak valid
+      </div>
+      <div id="zoneIdSuccess" style="font-size: 12px; margin-top: 6px; color: #10b981; display: none; font-weight: 600;">
+       ✅ Zone ID valid
+      </div>
+     </div><!-- Diamond Packages -->
+     <div style="margin-bottom: 24px;"><label style="display: block; font-weight: 600; margin-bottom: 12px;">Pilih Paket Diamond</label>
+      <div id="packageList" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 12px;">
+      </div>
+     </div><!-- Payment Method -->
+     <div style="margin-bottom: 24px;"><label style="display: block; font-weight: 600; margin-bottom: 12px;">Metode Pembayaran</label>
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;"><button onclick="selectPayment('DANA')" class="payment-btn" data-payment="DANA" style="padding: 16px; border: 2px solid #e5e7eb; border-radius: 8px; cursor: pointer; display: flex; align-items: center; gap: 12px; font-weight: 600; transition: all 0.3s;"> <span style="font-size: 24px;">💳</span> <span>DANA</span> </button> <button onclick="selectPayment('OVO')" class="payment-btn" data-payment="OVO" style="padding: 16px; border: 2px solid #e5e7eb; border-radius: 8px; cursor: pointer; display: flex; align-items: center; gap: 12px; font-weight: 600; transition: all 0.3s;"> <span style="font-size: 24px;">��</span> <span>OVO</span> </button> <button onclick="selectPayment('GoPay')" class="payment-btn" data-payment="GoPay" style="padding: 16px; border: 2px solid #e5e7eb; border-radius: 8px; cursor: pointer; display: flex; align-items: center; gap: 12px; font-weight: 600; transition: all 0.3s;"> <span style="font-size: 24px;">🏍️</span> <span>GoPay</span> </button> <button onclick="selectPayment('QRIS')" class="payment-btn" data-payment="QRIS" style="padding: 16px; border: 2px solid #e5e7eb; border-radius: 8px; cursor: pointer; display: flex; align-items: center; gap: 12px; font-weight: 600; transition: all 0.3s;"> <span style="font-size: 24px;">📱</span> <span>QRIS</span> </button>
+      </div>
+     </div><!-- Order Summary -->
+     <div id="orderSummary" style="padding: 20px; border-radius: 12px; margin-bottom: 24px; display: none;">
+      <h4 style="font-weight: bold; margin-bottom: 12px;">Ringkasan Pesanan</h4>
+      <div style="display: flex; justify-content: space-between; margin-bottom: 8px;"><span>Paket:</span> <span id="summaryPackage" style="font-weight: 600;"></span>
+      </div>
+      <div style="display: flex; justify-content: space-between; margin-bottom: 8px;"><span>Pembayaran:</span> <span id="summaryPayment" style="font-weight: 600;"></span>
+      </div>
+      <div style="border-top: 2px solid rgba(0, 0, 0, 0.1); margin: 12px 0; padding-top: 12px; display: flex; justify-content: space-between; font-size: 18px;"><span style="font-weight: bold;">Total:</span> <span id="summaryTotal" style="font-weight: bold;"></span>
+      </div>
+     </div><!-- Submit Button --> <button id="submitOrderBtn" onclick="submitOrder()" disabled style="width: 100%; padding: 16px; border: none; border-radius: 12px; font-size: 18px; font-weight: bold; cursor: not-allowed; opacity: 0.5; transition: all 0.3s;"> Beli Sekarang </button>
+    </div>
+   </div>
+  </div><!-- Success Modal -->
+  <div id="successModal" class="modal">
+   <div class="modal-content" style="text-align: center;">
+    <div style="padding: 48px 32px;">
+     <svg class="success-checkmark" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 52 52"><circle class="success-checkmark__circle" cx="26" cy="26" r="25" fill="none" /> <path class="success-checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+     </svg>
+     <h3 style="font-size: 28px; font-weight: bold; margin: 24px 0 12px;">Pesanan Berhasil!</h3>
+     <p style="opacity: 0.7; margin-bottom: 32px;">Diamond akan segera masuk ke akun game kamu dalam 1-5 menit</p><button onclick="closeSuccessModal()" style="padding: 12px 32px; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; font-size: 16px;"> Tutup </button>
+    </div>
+   </div>
+  </div>
+  <script src="JavaScript"></script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9a0409ae829b9d6f',t:'MTc2MzQzMjk0Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
